@@ -2,36 +2,51 @@ import React from 'react';
 import styled from 'styled-components';
 import { Plus, Search } from 'react-feather';
 
-const Container = styled('div')`
-  height: 50px;
+
+import Container from "../../layout/Container";
+
+const Header = styled("header")`
   font-family: sans-serif;
   background-color: #032541;
+`;
+
+const ContainerItems = styled(Container)`
   display: flex;
-  padding: 0 40px;
   align-items: center;
   justify-content: space-between;
 `;
-const Img = styled('img')`
+
+
+const Img = styled("img")`
   width: fit-content;
   height: 20px;
 `;
-const Content = styled('div')`
+
+const Content = styled("div")`
   display: flex;
   align-items: center;
 `;
-const H5 = styled('h5')`
+
+const H5 = styled("h5")`
   margin: 0 1rem;
   color: white;
   cursor: pointer;
 `;
+
+
+const Content2 = styled("div")`
+
 const Content2 = styled('div')`
+
   display: flex;
   align-items: center;
   padding: 1rem;
   justify-content: space-around;
 `;
+
 const Button = styled('button')`
   border: 0.5px solid white;
+
   cursor: pointer;
   background: none;
   border-radius: 3px;
@@ -45,10 +60,12 @@ const Button = styled('button')`
     transition: all 0.2s;
   }
 `;
+
 const Navbar = () => {
   return (
-    <Container>
-      <Content>
+    <Header>
+      <ContainerItems>
+           <Content>
         <Img
           src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
           alt=""
@@ -65,7 +82,9 @@ const Navbar = () => {
         <H5>Join TMDB</H5>
         <Search color="aquamarine" style={{ marginLeft: '1.5rem', cursor: 'pointer' }} />
       </Content2>
-    </Container>
+      </ContainerItems>
+    </Header>
+
   );
 };
 
