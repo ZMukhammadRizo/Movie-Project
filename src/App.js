@@ -1,14 +1,16 @@
+import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Search from './components/Search/Search';
+
+import Routers from './routes/Routers';
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Search />
+      <Routers/>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 };
 
