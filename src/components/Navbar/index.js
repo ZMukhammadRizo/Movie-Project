@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Plus, Search } from 'react-feather';
 
 import Container from '../../layout/Container';
+import { Link } from 'react-router-dom';
 
 const Header = styled('header')`
   font-family: sans-serif;
@@ -60,10 +61,12 @@ const Navbar = () => {
     <Header>
       <ContainerItems>
         <Content>
-          <Img
-            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
-            alt=""
-          />
+          <Link to={'/'}>
+            <Img
+              src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+              alt=""
+            />
+          </Link>
           <H5>Movies</H5>
           <H5>TV Shows</H5>
           <H5>People</H5>
@@ -72,7 +75,9 @@ const Navbar = () => {
         <Content2>
           <Plus color="white" cursor="pointer" />
           <Button>EN</Button>
-          <H5>Login</H5>
+          <Link to={'/login'}>
+            <H5>Login</H5>
+          </Link>
           <H5>Join TMDB</H5>
           <Search color="aquamarine" style={{ marginLeft: '1.5rem', cursor: 'pointer' }} />
         </Content2>
