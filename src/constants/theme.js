@@ -9,6 +9,7 @@ export default () => {
       tmdbLightBlue: '#01b4e4',
       tmdbLightGreen: '#1ed5a9',
       darkBlue: 'rgba(3,37,6)',
+      accountPurple: 'rgba(128,91,231)',
     },
   };
 };
