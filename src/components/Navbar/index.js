@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Plus, Search } from 'react-feather';
-
 import Container from '../../layout/Container';
 import { Link } from 'react-router-dom';
-
+import { UncontrolledPopover, Button, PopoverHeader, PopoverBody } from 'reactstrap';
 const Header = styled('header')`
   font-family: sans-serif;
   background-color: #032541;
@@ -30,6 +29,7 @@ const H5 = styled('h5')`
   margin: 0 1rem;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const Content2 = styled('div')`
@@ -39,9 +39,8 @@ const Content2 = styled('div')`
   justify-content: space-around;
 `;
 
-const Button = styled('button')`
+const LngButton = styled('button')`
   border: 0.5px solid white;
-
   cursor: pointer;
   background: none;
   border-radius: 3px;
@@ -54,6 +53,17 @@ const Button = styled('button')`
     color: black;
     transition: all 0.2s;
   }
+`;
+const PopUpBody = styled('PopoverBody')`
+  background-color: white;
+  font-size: 1em;
+  border: 1px solid rgba(33, 37, 41, 0.15);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  width: 50px;
+`;
+const ControlledPopUp = styled(UncontrolledPopover)`
+  width: 100px;
 `;
 
 const Navbar = () => {
@@ -73,13 +83,22 @@ const Navbar = () => {
           <H5>More</H5>
         </Content>
         <Content2>
-          <Plus color="white" cursor="pointer" />
-          <Button>EN</Button>
+          <Plus color="white" cursor="pointer" id="UncontrolledPopover" type="button" />
+          <ControlledPopUp placement="bottom" target="UncontrolledPopover">
+            <PopUpBody>Can't find a movie or TV show? Login to create it.</PopUpBody>
+          </ControlledPopUp>
+
+          <LngButton>EN</LngButton>
           <Link to={'/login'}>
             <H5>Login</H5>
           </Link>
-          <H5>Join TMDB</H5>
-          <Search color="aquamarine" style={{ marginLeft: '1.5rem', cursor: 'pointer' }} />
+          <H5 as={Link} to={'/signup'}>
+            Join TMDB
+          </H5>
+          <Search
+            color="rgba(0, 173, 255, 0.8)"
+            style={{ marginLeft: '1.5rem', cursor: 'pointer' }}
+          />
         </Content2>
       </ContainerItems>
     </Header>
