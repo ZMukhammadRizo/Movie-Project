@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Plus, Search } from 'react-feather';
 import Container from '../../layout/Container';
 import { Link } from 'react-router-dom';
-import { UncontrolledPopover, Button, PopoverHeader, PopoverBody } from 'reactstrap';
+import { UncontrolledPopover } from 'reactstrap';
 const Header = styled('header')`
   font-family: sans-serif;
   background-color: #032541;

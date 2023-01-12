@@ -1,10 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import Container from "../../layout/Container";
-import { itemsFour, itemsOne, itemsThree, itemsTwo } from "./footerItem";
+import Container from '../../layout/Container';
+import { itemsFour, itemsOne, itemsThree, itemsTwo } from './footerItem';
 
-const FooterContent = styled("div")`
+const FooterContent = styled('div')`
   background-color: #032541;
   padding: 40px 0;
 `;
@@ -15,22 +16,25 @@ const FooterContainer = styled(Container)`
   justify-content: space-evenly;
 `;
 
-const FooterLeft = styled("div")`
+const FooterLeft = styled('div')`
   display: flex;
   /* align-items: flex-end; */
   flex-direction: column;
 `;
 
-const FooterLogo = styled("a")``;
+const FooterLogo = styled('a')``;
 
-const FooterLogoImg = styled("img")`
+const FooterLogoImg = styled('img')`
   width: 130px;
   height: 95px;
   object-fit: cover;
   margin-bottom: 1em;
 `;
 
-const FooterLeftBtn = styled("button")`
+const FooterLeftBtn = styled('button')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   height: 50px;
   color: rgb(1, 180, 228);
@@ -41,22 +45,23 @@ const FooterLeftBtn = styled("button")`
   background: #fff;
   cursor: pointer;
   border: none;
+  text-decoration: none;
 `;
 
-const FooterRight = styled("div")`
+const FooterRight = styled('div')`
   display: flex;
   gap: 3em;
 `;
 
-const FooterItemOne = styled("div")``;
+const FooterItemOne = styled('div')``;
 
-const FooterItemTwo = styled("div")``;
+const FooterItemTwo = styled('div')``;
 
-const FooterItemThree = styled("div")``;
+const FooterItemThree = styled('div')``;
 
-const FooterItemFour = styled("div")``;
+const FooterItemFour = styled('div')``;
 
-const FooterRightList = styled("ul")`
+const FooterRightList = styled('ul')`
   list-style: none;
 
   & li {
@@ -69,7 +74,7 @@ const FooterRightList = styled("ul")`
   }
 `;
 
-const FooterRightListLink = styled("a")`
+const FooterRightListLink = styled('a')`
   text-decoration: none;
   font-size: 18px;
   color: #fff;
@@ -86,7 +91,9 @@ const Footer = () => {
               alt="The Movie DB Logo"
             />
           </FooterLogo>
-          <FooterLeftBtn>join the community</FooterLeftBtn>
+          <FooterLeftBtn as={Link} to={'/signup'}>
+            join the community
+          </FooterLeftBtn>
         </FooterLeft>
         <FooterRight>
           <FooterItemOne>

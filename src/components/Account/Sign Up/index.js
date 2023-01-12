@@ -73,6 +73,11 @@ const Button = styled('button')`
   border-radius: ${({ theme }) => theme.borderRadius.imageBorderRadius};
   color: #fff;
   background-color: ${({ theme }) => theme.background.accountLightBlue};
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+  }
 `;
 
 const Button2 = styled('button')`
