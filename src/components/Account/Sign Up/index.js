@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import Container from '../../../layout/Container';
 import { Texts as information } from './constants/texts';
 import { Check } from 'react-feather';
-import { Label } from 'reactstrap';
-import { labelText } from './constants/inputLabels';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const SignUpContainer = styled(Container)`
@@ -58,7 +55,7 @@ const Input = styled('input')`
   margin: 1rem 2.6rem;
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid ${({ theme }) => theme.background.accountLightBlue};
+  border: 1px solid ${({ theme }) => theme.background.lightGrey};
   color: #495057;
   border-radius: 0.25rem;
 `;
@@ -75,8 +72,7 @@ const Button = styled('button')`
   background-color: ${({ theme }) => theme.background.accountLightBlue};
   &:hover {
     background-color: black;
-    color: white;
-    transition: all 0.5s;
+    transition: all 0.8s;
   }
 `;
 
