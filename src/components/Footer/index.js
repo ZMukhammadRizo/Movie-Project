@@ -8,6 +8,7 @@ import { itemsFour, itemsOne, itemsThree, itemsTwo } from './footerItem';
 const FooterContent = styled('div')`
   background-color: #032541;
   padding: 40px 0;
+  display: flex;
 `;
 
 const FooterContainer = styled(Container)`
