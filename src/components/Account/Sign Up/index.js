@@ -102,19 +102,19 @@ const SignUp = () => {
         </OtherTexts>
         <InputLabel>
           Username
-          <Input className="Input" type={'text'} />
+          <Input type={'text'} />
         </InputLabel>
         <InputLabel>
           Password (4 characters minimum)
-          <Input className="Input" type={'password'} />
+          <Input type={'password'} />
         </InputLabel>
         <InputLabel>
           Confirm password
-          <Input className="Input" type={'password'} />
+          <Input type={'password'} />
         </InputLabel>
         <InputLabel>
           Email
-          <Input className="Input" type={'text'} />
+          <Input type={'text'} />
         </InputLabel>
         <Button>Sign Up</Button>
         <Button2 as={Link} to={'/'}>
