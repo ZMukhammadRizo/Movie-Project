@@ -6,9 +6,13 @@ import Container from '../../layout/Container';
 import { itemsFour, itemsOne, itemsThree, itemsTwo } from './footerItem';
 
 const FooterContent = styled('div')`
+  display: flex;
   background-color: #032541;
   padding: 40px 0;
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 30%;
 `;
 
 const FooterContainer = styled(Container)`

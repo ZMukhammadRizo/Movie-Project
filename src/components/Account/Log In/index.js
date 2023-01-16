@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Container from '../../../layout/Container';
 
+const LogInContainer = styled(Container)`
+  margin: auto;
+  @media (max-width: 1450px) {
+    margin: 2rem;
+  }
+`;
 const Header = styled('h2')`
   margin: 2rem 0 0 0;
   font-size: 1.5em;
@@ -62,7 +68,7 @@ const Button2 = styled('button')`
 
 const LogIn = () => {
   return (
-    <Container>
+    <LogInContainer>
       <Header>Login to your account</Header>
       <Texts>
         In order to use the editing and rating capabilities of TMDB, as well as get personal
@@ -89,7 +95,7 @@ const LogIn = () => {
       <Button2 as={Link} to={'/reset-password'}>
         Reset Password
       </Button2>
-    </Container>
+    </LogInContainer>
   );
 };
 
