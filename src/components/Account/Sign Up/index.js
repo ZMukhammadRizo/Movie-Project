@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 
 const SignUpContainer = styled(Container)`
   display: flex;
+  margin: auto;
+  @media (max-width: 1450px) {
+    margin: 0.7rem 2rem;
+  }
 `;
 
 const SideBar = styled('div')`
