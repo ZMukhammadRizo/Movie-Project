@@ -5,14 +5,11 @@ import styled from 'styled-components';
 import Container from '../../layout/Container';
 import { itemsFour, itemsOne, itemsThree, itemsTwo } from './footerItem';
 
-const FooterContent = styled('div')`
+const FooterContent = styled('footer')`
   display: flex;
   background-color: #032541;
   padding: 40px 0;
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  min-height: 30%;
 `;
 
 const FooterContainer = styled(Container)`

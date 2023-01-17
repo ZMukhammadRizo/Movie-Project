@@ -6,11 +6,15 @@ import Routers from './routes/Routers';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routers/>
-      <Footer />
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <main>
+          <Routers />
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 
